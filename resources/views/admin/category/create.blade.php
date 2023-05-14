@@ -16,41 +16,65 @@
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Name</label>
                                 <input type="text" name="name" class="form-control" style="border-radius: 10px">
+                                @error('name')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Slug</label>
                                 <input type="text" name="slug" class="form-control" style="border-radius: 10px">
+                                @error('slug')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Description</label>
                                 <textarea name="description" class="form-control"  rows="3" style="border-radius: 10px"></textarea>
+                                @error('description')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Image</label>
                                 <input type="file" name="image" class="form-control" style="border-radius: 10px">
+                                @error('image')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Status</label><br>
                                 <input type="checkbox" name="status">
+                                @error('status')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
-                            <div class="col-md-6 mb-3 form-group">
+                            {{-- <div class="col-md-6 mb-3 form-group">
                                 <label for="">Image</label>
                                 <input type="text" name="image" class="form-control" style="border-radius: 10px">
-                            </div>
+                            </div> --}}
                             <div class="col-md-12 mb-3">
                                 <h4>SEO Tags</h4>
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Meta Title</label>
                                 <input type="text" name="meta_title" class="form-control" style="border-radius: 10px">
+                                @error('meta_title')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Meta Keyword</label>
                                 <input type="text" name="meta_keyword" class="form-control" style="border-radius: 10px">
+                                @error('meta_keyword')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <label for="">Meta Description</label>
                                 <textarea name="meta_description" class="form-control"  rows="3" style="border-radius: 10px"></textarea>
+                                @error('meta_description')
+                                   <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-3 form-group">
                                 <button type="submit" class="btn btn-success">Save</button>

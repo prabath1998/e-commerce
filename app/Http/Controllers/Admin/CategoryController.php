@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryFormRequest;
 use App\Models\Category;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class CategoryController extends Controller
@@ -43,6 +44,7 @@ class CategoryController extends Controller
         $category->status = $request->status == true ? '1' : '0';
 
         $category->save();
+        Alert::success('Success', 'Category added successfully!');
         return redirect('admin/category')->with('message','Category added successfully!');
 
     }

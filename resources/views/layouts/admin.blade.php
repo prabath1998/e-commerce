@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
 
     <div class="container-scroller">
         @include('layouts.inc.admin.navbar')
