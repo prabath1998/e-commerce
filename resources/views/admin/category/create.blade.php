@@ -41,17 +41,25 @@
                                    <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="col-md-6 mb-3 form-group">
+                            {{-- <div class="col-md-6 mb-3 form-group">
                                 <label for="">Status</label><br>
                                 <input type="checkbox" name="status">
                                 @error('status')
                                    <p class="text-danger">{{ $message }}</p>
                                 @enderror
-                            </div>
-                            {{-- <div class="col-md-6 mb-3 form-group">
-                                <label for="">Image</label>
-                                <input type="text" name="image" class="form-control" style="border-radius: 10px">
                             </div> --}}
+
+                            <div>
+                                <div class="form-check form-switch col-md-2 mb-3 form-group">
+                                    <input class="form-check-input me-4" id="name" type="checkbox" name="status" style="margin: auto">
+                                    <label class="form-check-label" for="name">Status</label>
+                                    @error('status')
+                                    <p class="text-danger">{{ $message }}</p>
+                                 @enderror
+                                  </div>
+                            </div>
+
+
                             <div class="col-md-12 mb-3">
                                 <h4>SEO Tags</h4>
                             </div>

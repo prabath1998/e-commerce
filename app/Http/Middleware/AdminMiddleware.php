@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminMiddleware
@@ -17,6 +18,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if(!Auth::user()->role_as == '1'){
+            Alert::error('Error', 'Access Denied! You are not an admin');
             return redirect('/home')->with('status','Access Denied! You are not an admin.');
         }
         return $next($request);
